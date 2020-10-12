@@ -13,9 +13,9 @@ for v in case_history.values():
     new_cases.append(daycases)
     previous_daycases=v
 
-daycases_reg= np.poly1d(np.polyfit(xlegend,new_cases, 10))
+daycases_reg= np.poly1d(np.polyfit(xlegend,new_cases, 20))
 
-height=float(10)
+height=float(15)
 width=float(height)*(1+1/4)
 plt.figure(figsize=(width,height))
 

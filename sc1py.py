@@ -13,9 +13,9 @@ cases=[v for v in case_history.values()]
 recovered=[v for v in reco_history.values()]
 deaths=[v for v in deat_history.values()]
 
-poly_reg= np.poly1d(np.polyfit(days,cases, 20))
+poly_reg= np.poly1d(np.polyfit(days,cases, 10))
 #regression
-progDays=list(range(1,len(case_history)+1))
+progDays=list(range(1,len(case_history)+3))
 #size
 plt.figure(figsize=(15,9))
 plt.plot(progDays, poly_reg(progDays))
